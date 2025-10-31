@@ -33,7 +33,7 @@ function Register() {
           navigate("/login");
         }
       })
-      .catch(() => alert("User Already Exists"));
+      .catch((error) => alert("Something went wrong"));
   };
 
   return (
