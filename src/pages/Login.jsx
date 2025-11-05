@@ -1,8 +1,8 @@
 import axios from "axios";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
 import Menu from "../components/Menu";
-import { useNavigate } from "react-router-dom";
 
 function Login() {
   const [credentials, setCredentials] = useState({
@@ -21,7 +21,7 @@ function Login() {
     e.preventDefault(); // prevent form reload
 
     axios
-      .post("http://localhost:8080/login", {
+      .post("https://employee-crud-tryq.onrender.com/login", {
         email: credentials.email,
         password: credentials.password,
       })

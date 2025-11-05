@@ -10,7 +10,7 @@ function Dashboard() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/getAll")
+      .get("https://employee-crud-tryq.onrender.com/getAll")
       .then((response) => {
         setEmployees(response.data);
         setLoading(false);
@@ -25,7 +25,7 @@ function Dashboard() {
     // http://localhost:8080/delete?id=1
 
     axios
-      .delete(`http://localhost:8080/delete?id=${id}`)
+      .delete(`https://employee-crud-tryq.onrender.com/delete?id=${id}`)
       .then((response) => {
         if (response.data === true) {
           alert("Employee Deleted");

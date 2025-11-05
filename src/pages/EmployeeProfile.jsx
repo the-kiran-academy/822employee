@@ -17,7 +17,7 @@ function EmployeeProfile() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/getById?id=${id}`)
+      .get(`https://employee-crud-tryq.onrender.com/getById?id=${id}`)
       .then((response) => setEmployee(response.data))
       .catch(() => alert("something went wrong during fetch profile"));
   }, []);
@@ -26,7 +26,7 @@ function EmployeeProfile() {
     e.preventDefault();
 
     axios
-      .put("http://localhost:8080/update", {
+      .put("https://employee-crud-tryq.onrender.com/update", {
         id: employee.id,
         name: employee.name,
         email: employee.email,
